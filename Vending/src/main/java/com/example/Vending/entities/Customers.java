@@ -11,12 +11,17 @@ import org.springframework.data.cassandra.core.mapping.Table;
 import java.io.Serializable;
 
 @AllArgsConstructor
-@Getter@Setter
+@Getter
+@Setter
 @Table
 @NoArgsConstructor
-public class Product implements Serializable {
+public class Customers implements Serializable {
     @PrimaryKey
-    private @NotNull int id;
-    private @NotNull String drinkName;
-    private @NotNull int drinkPrice;
+    private @NotNull int customer_id;
+    //@PrimaryKey
+    //private @NotNull String order_id;
+    private @NotNull String first_name;
+    private  @NotNull String last_name;
+    private @NotNull String product_name;
+
 }
